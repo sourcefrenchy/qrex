@@ -1,0 +1,17 @@
+/Users/jma/Projects/qrex/qrex/bin/Release/netcoreapp3.0/qrex
+/Users/jma/Projects/qrex/qrex/bin/Release/netcoreapp3.0/qrex.deps.json
+/Users/jma/Projects/qrex/qrex/bin/Release/netcoreapp3.0/qrex.runtimeconfig.json
+/Users/jma/Projects/qrex/qrex/bin/Release/netcoreapp3.0/qrex.runtimeconfig.dev.json
+/Users/jma/Projects/qrex/qrex/bin/Release/netcoreapp3.0/qrex.dll
+/Users/jma/Projects/qrex/qrex/bin/Release/netcoreapp3.0/qrex.pdb
+/Users/jma/Projects/qrex/qrex/bin/Release/netcoreapp3.0/Microsoft.Win32.SystemEvents.dll
+/Users/jma/Projects/qrex/qrex/bin/Release/netcoreapp3.0/QRCoder.dll
+/Users/jma/Projects/qrex/qrex/bin/Release/netcoreapp3.0/System.Drawing.Common.dll
+/Users/jma/Projects/qrex/qrex/bin/Release/netcoreapp3.0/runtimes/win/lib/netcoreapp3.0/Microsoft.Win32.SystemEvents.dll
+/Users/jma/Projects/qrex/qrex/bin/Release/netcoreapp3.0/runtimes/unix/lib/netcoreapp3.0/System.Drawing.Common.dll
+/Users/jma/Projects/qrex/qrex/bin/Release/netcoreapp3.0/runtimes/win/lib/netcoreapp3.0/System.Drawing.Common.dll
+/Users/jma/Projects/qrex/qrex/obj/Release/netcoreapp3.0/qrex.AssemblyInfoInputs.cache
+/Users/jma/Projects/qrex/qrex/obj/Release/netcoreapp3.0/qrex.AssemblyInfo.cs
+/Users/jma/Projects/qrex/qrex/obj/Release/netcoreapp3.0/qrex.csproj.CopyComplete
+/Users/jma/Projects/qrex/qrex/obj/Release/netcoreapp3.0/qrex.dll
+/Users/jma/Projects/qrex/qrex/obj/Release/netcoreapp3.0/qrex.pdb
