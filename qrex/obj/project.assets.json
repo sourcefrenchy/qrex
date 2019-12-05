@@ -183,24 +183,26 @@
     ]
   },
   "packageFolders": {
-    "/Users/jma/.nuget/packages/": {}
+    "C:\\Users\\jma\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/jma/Projects/qrex/qrex/qrex.csproj",
+      "projectUniqueName": "C:\\Users\\jma\\Documents\\GitHub\\qrex\\qrex\\qrex.csproj",
       "projectName": "qrex",
-      "projectPath": "/Users/jma/Projects/qrex/qrex/qrex.csproj",
-      "packagesPath": "/Users/jma/.nuget/packages/",
-      "outputPath": "/Users/jma/Projects/qrex/qrex/obj/",
+      "projectPath": "C:\\Users\\jma\\Documents\\GitHub\\qrex\\qrex\\qrex.csproj",
+      "packagesPath": "C:\\Users\\jma\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\jma\\Documents\\GitHub\\qrex\\qrex\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/jma/.config/NuGet/NuGet.Config"
+        "C:\\Users\\jma\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -241,7 +243,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.0.101/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

