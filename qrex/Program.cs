@@ -27,7 +27,9 @@ namespace qrExfil
 
     public static class Qrex
     {
+#pragma warning disable CS1998 // Async method lacks 'await' operators and will run synchronously
         static async void OpenImage(string imagePath, int time)
+#pragma warning restore CS1998 // Async method lacks 'await' operators and will run synchronously
         {
             Process photoViewer = new Process();
             photoViewer.StartInfo.FileName = "c:\\windows\\system32\\rundll32.exe ";
